@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Topics Menu</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f0f2f5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .topics-box {
+                background-color: #ffffff;
+                padding: 30px 40px;
+                border-radius: 10px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 500px;
+                }
+            .topics-box h2{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .form-group {
+            position: relative;
+            margin-bottom: 20px;
+            }
+            .topics-text {
+                display: "none";
+                text-align: center;
+                margin-top: 20px;
+            }
+            a.button {
+                padding: 1px 6px;
+                border: 1px outset buttonborder;
+                border-radius: 3px;
+                text-decoration: none;
+            }
+            button {
+                width: 100%;
+                padding: 12px;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            button:hover {
+                filter:brightness(85%)
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function showMathTopics(){
+                var show = document.getElementById("math-topics");
+                    if (show.style.display === "none") {
+                        show.style.display = "block";
+                    } else {
+                        show.style.display = "none";
+                    }
+            }
+            function showScienceTopics(){
+                var show = document.getElementById("science-topics");
+                    if (show.style.display === "none") {
+                        show.style.display = "block";
+                    } else {
+                        show.style.display = "none";
+                    }
+            }
+            function showEnglishTopics(){
+                var show = document.getElementById("english-topics");
+                    if (show.style.display === "none") {
+                        show.style.display = "block";
+                    } else {
+                        show.style.display = "none";
+                    }
+            }
+        </script>
+        <div class="topics-box">
+            <h2>Subjects</h2>
+            <div class="form-group">
+                <button onclick=showMathTopics() style="background-color: rgb(31, 165, 120);">Math</button>
+                <div class="topics-text" id="math-topics" style="display: none;">
+                    <a class="button" href="/TopicPages/addTopic.html">Addition</a>
+                    <a class="button" >Subtraction</a>
+                    <a class="button">Multiplication</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <button onclick=showScienceTopics() style="background-color: cornflowerblue;">Science</button>
+                <div class="topics-text" id="science-topics" style="display: none;">
+                    <a class="button">Physics</a>
+                    <a class="button">Biology</a>
+                    <a class="button">Chemisty</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <button onclick=showEnglishTopics() style="background-color: burlywood;">English</button>
+                <div class="topics-text" id="english-topics" style="display: none;">
+                    <a class="button">Grammar</a>
+                    <a class="button">Writing</a>
+                    <a class="button"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
